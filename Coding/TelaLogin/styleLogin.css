@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/*font - Blinker*/
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap');
+
+/*font-Alice*/
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+/*font-kronaOne*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+:root{
+    --cor1: #222601;
+    --cor2: #B9BF04;
+    --cor3: #BFB304;
+    --cor4: #8C8303;
+    --cor5: #595302;
+    --preto: black;
+    --cinza: gray;
+
+    --font-alice: 'Alice', serif;
+    --font-blinker: 'Blinker', sans-serif;
+    --font-kronaone: 'Krona One', sans-serif;
+
+}
+
+body{
+    background-color: var(--cinza);
+    
+}
+
+#login_lado_esquerdo{
+    position: relative;
+    background-color: var(--cor4);
+}
+
+#login_lado_esquerdo .card{
+    background-color: var(--cor4);
+    position: absolute;
+    right: 11%;
+    padding: 179px 0px;
+    /* top: 28%; */
+    width: 80%;
+    margin: auto;
+    border: 0px;
+}
+
+#login_lado_esquerdo .card h3{
+    font-family: var(--font-alice);
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px rgba(195, 194, 194, 0.792);
+}
+
+#login_lado_esquerdo .card p{
+    font-family: var(--font-kronaone);
+    font-size: 13px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#login_lado_esquerdo .card a{
+    font-family: var(--font-kronaone);
+    background-color: white;
+    color: var(--cor4);
+    border: 2px;
+    border-radius: 20px ;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.505);
+    
+}
+#login_lado_esquerdo .card a:hover{
+    background-color: var(--cor3);
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.59);
+    
+}
+
+
+#login_lado_direito{
+    position: relative;
+    background-color: white;
+}
+
+#login_lado_direito .card{
+    position: absolute;
+    right: 11%;
+    padding: 179px 0px;
+    /* top: 28%; */
+    width: 80%;
+    margin: auto;
+    border: 0px;
+}
+
+#login_lado_direito .card-body{
+    position: relative;
+    padding-top: 0px;
+}
+
+#login_lado_direito .card-title{
+    font-family: var(--font-alice);
+    font-size: 50px;
+    text-shadow: 2px 2px rgba(195, 194, 194, 0.792);
+    color: var(--cor4);
+    margin-bottom: 50px;
+}
+
+#login_lado_direito .formulario{
+    position: relative;
+    width: auto;
+}
+
+#login_lado_direito .form-control{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    background-color: rgb(222, 217, 217);
+    box-shadow: 2px 2px 4px rgba(50, 50, 50, 0.34);
+    color: var(--cor4);
+
+}
+
+#login_lado_direito .form-control:focus, 
+#login_lado_direito .form-control:hover{
+    font-family: var(--font-blinker);
+    font-size: 20px;
+    color: var(--cor4);
+    border-color: var(--cor4)
+}
+
+#login_lado_direito .form-control::placeholder{
+    font-family: var(--font-blinker);
+    font-size: 20px;
+    color: var(--cor4);
+}
+
+#login_lado_direito #passeOMouse_senha{
+    display: none;
+}
+
+#login_lado_direito #myPass:hover + #passeOMouse_senha{
+    display: block;
+    color: red;
+}
+
+
+#login_lado_direito .btn{
+    font-family: var(--font-kronaone);
+    background-color: var(--cor4);
+    color: white;
+    border: 2px;
+    margin-top: 15px;
+    border-radius: 20px ;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.505);
+    
+}
+#login_lado_direito .btn:hover{
+    background-color: var(--cor3);
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.59);
+    
+}
