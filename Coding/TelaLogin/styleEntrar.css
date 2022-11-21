@@ -24,51 +24,86 @@
 
 }
 
-body{
-    background-color: var(--cinza);
-    
-}
-
-#login_lado_esquerdo{
+#tela_entrar_login{
     position: relative;
-    background-color: var(--cor4);
+    background-color: white;
 }
 
-#login_lado_esquerdo .card{
-    background-color: var(--cor4);
+#tela_entrar_login .card{
     position: absolute;
     right: 11%;
-    padding: 179px 0px;
+    padding: 110px 0px;
     /* top: 28%; */
     width: 80%;
     margin: auto;
     border: 0px;
 }
 
-#login_lado_esquerdo .card h3{
+#tela_entrar_login .card-body{
+    position: relative;
+    padding-top: 0px;
+}
+
+#tela_entrar_login .card-title{
     font-family: var(--font-alice);
-    font-size: 50px;
-    color: white;
+    font-size: 70px;
     text-shadow: 2px 2px rgba(195, 194, 194, 0.792);
-}
-
-#login_lado_esquerdo .card p{
-    font-family: var(--font-kronaone);
-    font-size: 13px;
-    margin-bottom: 40px;
-    color: white;
-}
-
-#login_lado_esquerdo .card a{
-    font-family: var(--font-kronaone);
-    background-color: white;
     color: var(--cor4);
+    margin-bottom: 45px;
+}
+
+#tela_entrar_login .formulario{
+    position: relative;
+    width: auto;
+}
+
+#tela_entrar_login .form-control{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    background-color: rgb(231, 226, 226);
+    box-shadow: 2px 2px 4px rgba(50, 50, 50, 0.34);
+    color: var(--cor4);
+
+}
+
+#tela_entrar_login .form-control:focus, 
+#tela_entrar_login .form-control:hover{
+    font-family: var(--font-blinker);
+    font-size: 17px;
+    color: var(--cor4);
+    border-color: var(--cor4)
+}
+
+#tela_entrar_login .form-control::placeholder{
+    font-family: var(--font-blinker);
+    font-size: 20px;
+    color: var(--cor4);
+}
+
+#tela_entrar_login #esqueceu_senha{
+    font-family: var(--font-blinker);
+    color: var(--cor4);
+    font-size: 14px;
+    float: left; 
+    width: 60%;
+    margin-top: 7px;
+}
+
+
+#tela_entrar_login #btn_entrar{
+    font-family: var(--font-kronaone);
+    background-color: var(--cor4);
+    color: white;
     border: 2px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 8px;
     border-radius: 20px ;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.505);
-    
 }
-#login_lado_esquerdo .card a:hover{
+
+#tela_entrar_login #btn_entrar:hover{
     background-color: var(--cor3);
     color: white;
     border: none;
@@ -76,85 +111,25 @@ body{
     
 }
 
-
-#login_lado_direito{
-    position: relative;
-    background-color: white;
-}
-
-#login_lado_direito .card{
-    position: absolute;
-    right: 11%;
-    padding: 179px 0px;
-    /* top: 28%; */
-    width: 80%;
-    margin: auto;
-    border: 0px;
-}
-
-#login_lado_direito .card-body{
-    position: relative;
-    padding-top: 0px;
-}
-
-#login_lado_direito .card-title{
-    font-family: var(--font-alice);
-    font-size: 50px;
-    text-shadow: 2px 2px rgba(195, 194, 194, 0.792);
-    color: var(--cor4);
-    margin-bottom: 50px;
-}
-
-#login_lado_direito .formulario{
-    position: relative;
-    width: auto;
-}
-
-#login_lado_direito .form-control{
-    position: relative;
-    width: 70%;
-    margin: auto;
-    background-color: rgb(222, 217, 217);
-    box-shadow: 2px 2px 4px rgba(50, 50, 50, 0.34);
-    color: var(--cor4);
-
-}
-
-#login_lado_direito .form-control:focus, 
-#login_lado_direito .form-control:hover{
-    font-family: var(--font-blinker);
-    font-size: 17px;
-    color: var(--cor4);
-    border-color: var(--cor4)
-}
-
-#login_lado_direito .form-control::placeholder{
-    font-family: var(--font-blinker);
-    font-size: 20px;
-    color: var(--cor4);
-}
-
-#login_lado_direito #passeOMouse_senha{
-    display: none;
-}
-
-#login_lado_direito #myPass:hover + #passeOMouse_senha{
-    display: block;
-    color: red;
-}
-
-
-#login_lado_direito .btn{
+#tela_entrar_login .texto{
+    
     font-family: var(--font-kronaone);
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+#tela_entrar_login #btn_cadastrar{
+    font-family: var(--font-blinker);
     background-color: var(--cor4);
+    font-size: 10px;
     color: white;
+    padding: 0px;
     border: 2px;
-    margin-top: 15px;
     border-radius: 20px ;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.505);
-    
 }
-#login_lado_direito .btn:hover{
+
+#tela_entrar_login #btn_cadastrar:hover{
     background-color: var(--cor3);
     color: white;
     border: none;
