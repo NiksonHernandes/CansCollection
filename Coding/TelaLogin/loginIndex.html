@@ -11,11 +11,12 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--Style Page-->
     <link rel="stylesheet" href="styleLogin.css">
+    
 </head>
 
 <body>
     <div class="container mw-100">
-        <div class="row">
+        <div class="row" >
             <div id="login_lado_esquerdo" class="col-sm-5" style="height: 100vh;">
                 <div class="card text-center">
                     <img src="..." class="card-img-top" alt="Logo aqui">
@@ -31,32 +32,28 @@
                 <div class="card text-center">
                     <div class="card-body">
                         <h3 class="card-title">CRIE SUA CONTA!</h3>
-                        <form action="..." method="POST" class="formulario">
-                            <input type="text" name="Email" placeholder="Nome" class="form-control mb-2" />
-                            <input type="email" name="email" placeholder="Email" class="form-control mb-2" />
-                            <input id="myPass" type="password" name="Senha" placeholder="Senha" class="form-control mb-2" />
-                            <div id="passeOMouse_senha">Sua senha deve ter de 8 a 20 caracteres.</div>
-                            <input  type="checkbox" onclick="myFunction()" > Mostrar senha    
-                            <br>
-                            <button type="submit" class="btn btn-primary col-5">CRIAR CONTA</button>
-                        </form>
+                      
+                        <input id="nomeRegister" type="text" name="nome" placeholder="Nome" class="form-control mb-2" />
+                        <input id="emailRegister" type="email" name="email" placeholder="Email" class="form-control mb-2" />
+                        <input id="passwordRegister" type="password" name="Senha" placeholder="Senha" class="form-control mb-2" />
+                        <div id="passeOMouse_senha">Sua senha deve ter de 8 a 20 caracteres.</div>
+                        <input  type="checkbox" onclick="myFunction()" > Mostrar senha    
+                        <br>
+                        <button id="btnCriarConta" class="btn btn-primary col-5">CRIAR CONTA</button>
+    
                     </div>
+                </div>
+                <div id="alert1" class="alert">
+                    <span class="closebtn" onclick="closeAlert()">&times;</span> 
+                    <strong>Opss!</strong> Existem alguns campos vazios!
+                </div>
+                <div id="alert2" class="alert">
+                    <span class="closebtn" onclick="closeAlert()">&times;</span> 
+                    <strong>Parabéns!</strong> Entre com o seu login, pois você já está cadastrado. Aguarde!
                 </div>
             </div>
         </div>
     </div>
 </body>
-
-<script>
-    //função ver senha
-    function myFunction() {
-         var x = document.getElementById("myPass");
-        if (x.type === "password") {
-            x.type = "text";
-        } else {
-            x.type = "password";
-        }
-    }
-</script>
-
+    <script src="../codigos/registrarSe.js"></script>
 </html>

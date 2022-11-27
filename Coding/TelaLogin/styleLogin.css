@@ -138,7 +138,7 @@ body{
     display: none;
 }
 
-#login_lado_direito #myPass:hover + #passeOMouse_senha{
+#login_lado_direito #passwordRegister:hover + #passeOMouse_senha{
     display: block;
     color: red;
 }
@@ -161,3 +161,33 @@ body{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.59);
     
 }
+
+#alert1 {
+    margin-top: 1rem;
+    padding: 20px;
+    background-color: var(--cor4);
+    color: white;
+}
+
+#alert2 {
+    margin-top: 1rem;
+    padding: 20px;
+    background-color: green;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: black;
+}
+
