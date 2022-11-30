@@ -21,8 +21,13 @@ window.onclick = function(event) {
 //fechar alert
 function closeAlert() {
   var a1 = document.getElementById("alert1").hidden = true;
-  //var a2 = document.getElementById("alert2").hidden = true;
+  var a3 = document.getElementById("alert3").hidden = true;
 }
+
+//fecha alert de bem-vindo dps de 4 seg
+setTimeout(function () {
+  var a3 = document.getElementById("alert3").hidden = true;
+}, 4000);
 
 a1 = document.getElementById("alert1").hidden = true;
 
@@ -43,11 +48,28 @@ class Lata {
 var armazena = [
   {
     _nomeLata: "Bush",
-    _lote: "123ff",
+    _lote: "SFGI4435",
     _pais: "EUA",
-    _volume: 123,
-    _tipo: "cerveja"
+    _volume: 450,
+    _tipo: "Cerveja"
   },  
+
+  {
+    _nomeLata: "Sacramento",
+    _lote: "OLKP0933",
+    _pais: "Holanda",
+    _volume: 500,
+    _tipo: "Cerveja"
+  },  
+
+  {
+    _nomeLata: "Coca-Cola - Special Edition",
+    _lote: "SADF3455",
+    _pais: "Hong-Kong",
+    _volume: 750,
+    _tipo: "Refrigerante"
+  },  
+
 ]
 var auxPosicao = '';
 
@@ -72,7 +94,7 @@ function listarTabela(lista) {
         + '<td>' + lista[i]._volume + '</td>' 
         + '<td>' + lista[i]._tipo + '</td>' 
         + '<td>' + 
-        '<button class="btn btn-info" rel="'+ i +'" >I</button>' + 
+        '<button class="btn btn-info" rel="'+ i +'" > INFO </button>' + 
         '</td>' + '<td>' + 
         '<button class="btn btn-warning" rel="'+ i +'" >A</button>' + 
         '</td>' + '<td>' + 
@@ -86,8 +108,23 @@ document.getElementById("corpoTabela").innerHTML = listarTabela(armazena);
 
 let btn_cadastrar = document.getElementById("btn_modal");
 let btn_addLata = document.getElementById("btn_addLata");
+let btn_pesquisar = document.getElementById("btn_pesquisar");
+
+btn_pesquisar.addEventListener("click", function() { 
+  alert(`Opss! \nEste botão esta em fase de desenvolvimento! '~' \n\nEquipe Cans Callection `)
+})
 
 btn_addLata.addEventListener("click", function() {
+
+  btn_cadastrar.style.display = 'block';
+  auxPosicao = ''
+
+  document.getElementById("nomedaLata").value = '';
+  document.getElementById("lote").value = '';
+  document.getElementById("pais").value = '';
+  document.getElementById("volume").value = '';
+  document.getElementById("tipo").value = '';
+
   $("#nomedaLata").removeAttr('disabled');
   $("#lote").removeAttr('disabled');
   $("#pais").removeAttr('disabled');
@@ -164,17 +201,18 @@ $("#corpoTabela").on("click", '.btn-info', function () {
   document.getElementById('id01').style.display='block';
   btn_cadastrar.style.display = 'none';
 
+  $("#nomedaLata").val(armazena[auxPosicao ]._nomeLata);
+  $("#lote").val(armazena[auxPosicao ]._lote);
+  $("#pais").val(armazena[auxPosicao ]._pais);
+  $("#volume").val(armazena[auxPosicao ]._volume);
+  $("#tipo").val(armazena[auxPosicao ]._tipo);
+
   $("#nomedaLata").attr('disabled','disabled');
   $("#lote").attr('disabled','disabled');
   $("#pais").attr('disabled','disabled');
   $("#volume").attr('disabled','disabled');
   $("#tipo").attr('disabled','disabled');
 
-  $("#nomedaLata").val(armazena[auxPosicao ]._nomeLata);
-  $("#lote").val(armazena[auxPosicao ]._lote);
-  $("#pais").val(armazena[auxPosicao ]._pais);
-  $("#volume").val(armazena[auxPosicao ]._volume);
-  $("#tipo").val(armazena[auxPosicao ]._tipo);
 })
 
 $("#corpoTabela").on("click", '.btn-danger', function(){

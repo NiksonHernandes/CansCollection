@@ -18,13 +18,22 @@
     <body>
         <div class="container mw-100">
             <div class="row">
+               
                 <div id="login_lado_direito" class="col" style="height: 100vh"></div>
                 
                 <div id="tela_entrar_login" class="col-6" style="height: 100vh;">
                     <div class="card text-center">
+                     
                         <div class="card-body">
                             <h3 class="card-title"> LOGIN</h3>
-                          
+                            <div id="alert1" class="alert top-0 start-50 translate-middle-x">
+                                <span class="closebtn" onclick="closeAlert()">&times;</span> 
+                                <strong>Opss!</strong> Existem alguns campos vazios!
+                            </div>
+                            <div id="alert2" class="alert top-0 start-50 translate-middle-x">
+                                <span class="closebtn" onclick="closeAlert()">&times;</span> 
+                                <strong>Atenção!</strong> Usuário ou senha inválido!
+                            </div>
                             <input id="emailLogin" type="email" name="email" placeholder="Email" class="form-control mb-3" />
                             <input id="myPass" type="password" name="Senha" placeholder="Senha" class="form-control mb-2" />
                             <!--<div id="passeOMouse_senha">Sua senha deve ter de 8 a 20 caracteres.</div>-->

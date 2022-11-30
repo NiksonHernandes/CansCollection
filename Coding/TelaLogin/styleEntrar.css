@@ -24,6 +24,40 @@
 
 }
 
+/*config alert*/
+#alert1 {
+    text-align: center;
+    width: 70%;
+    margin-bottom: 2em;
+    padding: 5px;
+    background-color: var(--cor4);
+    color: white;
+}
+
+#alert2 {
+    text-align: center;
+    width: 70%;
+    margin-bottom: 2em;
+    padding: 5px;
+    background-color: rgba(167, 7, 7, 0.989);
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: black;
+}
+
 #tela_entrar_login{
     position: relative;
     background-color: white;

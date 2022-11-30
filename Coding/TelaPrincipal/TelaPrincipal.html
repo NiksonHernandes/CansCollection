@@ -18,36 +18,42 @@
     <header>
         <div id="navbar">
             <a id="imagem_logo" href="#contact">LOGO AAQUI</a>
-            <a href="#contact">LOGOFF</a>
+            <a href="../TelaLogin/loginIndex.html">LOGOFF</a>
         </div>
     </header>
     
-
     <div class="container" style="margin-top: 60px;">
-        <div class="col-12">
-            <div class="card">
+       
+        <div class="col-12">  
+            <div id="alert3" class="alert">
+                <span class="closebtn" onclick="closeAlert()">&times;</span> 
+                <strong>Olá!</strong> Seja bem-vindo(a)!
+            </div> 
+            <div  id="corpo_lista_externa" class="card">
                 <div class="card-body">
-                    <p class="card-text text-left font-weight-bold" style="color: black; padding-right: 70px;font-size: 30px;"> Passagens Aéreas </p>
-                    <div class="card ">
-                        <div class="card-header">Filtro de Latinhas</div>
-                        <div class="card-body">
+                   
+                    <p id="text_filtroDeLatas" class="card-text text-left font-weight-bold"> Filtro de Latas </p>
+                    
+                    <div id="corpo_lista_interna" class="card ">
+                        <!-- <div class="card-header" style="background-color: #8C8303;"></div> -->
+                        <div  class="card-body">
                             <div class="row" >
                                 <div class="col-5 pt-1 position-relative">
-                                    <select name="itembusca" class="form-control">
+                                    <select name="itembusca" id="item_busca" class="form-control">
                                         <option value="Todos">Pesquisar por todos</option>
-                                        <option value="Nome">Nome do hotel</option>
-                                        <option value="Cidade">Cidade do hotel</option>5
-                                        <option value="Dsaida">Datas inicio</option>
-                                        <option value="Dchegada">Data fim</option>
-                                        <option value="Preco">Preço do hotel</option>
+                                        <option value="Nome">Nome da lata</option>
+                                        <option value="Cidade">Lote</option>5
+                                        <option value="Dsaida">País de origem</option>
+                                        <option value="Dchegada">Volume(ml)</option>
+                                        <option value="Preco">Tipo de lata</option>
                                     </select>
                                 </div>
                                 <div class="col-5 pt-1">
                                     <!--<input />-->
-                                    <input class="form-control" type="text" placeholder="Digite sua busca" />
+                                    <input id="digite_busca" class="form-control" type="text" placeholder="Digite sua busca" />
                                 </div>
                                 <div class="col-2 position-relative">
-                                    <button type="submit" class="btn btn-primary position-absolute top-0 end-0" style="margin-right: 1rem;">Pesquisar</button>
+                                    <button id="btn_pesquisar" class="btn btn-primary position-absolute top-50 start-50 translate-middle">Pesquisar</button>
                                 </div>
     
                                 <div class="d-grid gap-2 mt-3">
@@ -59,16 +65,16 @@
                         <!--TABELA AQUI-->
                         <br>
                         <table  class="table table-striped">
-                            <thead class="table-info">
-                                <tr>
-                                    <th scope="col">Nome da lata</th>
-                                    <th scope="col">Lote</th>
-                                    <th scope="col">País de origem</th>
-                                    <th scope="col">Volume(ml)</th>
-                                    <th scope="col">Tipo de lata</th>
-                                    <th scope="col">Detalhes</th>
-                                    <th scope="col">Alterar</th>
-                                    <th scope="col">Deletar</th>
+                            <thead class="table-light">
+                                <tr >
+                                    <th class="cabecalho" scope="col">Nome da lata</th>
+                                    <th class="cabecalho" scope="col">Lote</th>
+                                    <th class="cabecalho" scope="col">País de origem</th>
+                                    <th class="cabecalho" scope="col">Volume(ml)</th>
+                                    <th class="cabecalho" scope="col">Tipo de lata</th>
+                                    <th class="cabecalho" id="detalhes" scope="col">Detalhes</th>
+                                    <th class="cabecalho" id="alterar" scope="col">Alterar</th>
+                                    <th class="cabecalho" id="deletar" scope="col">Deletar</th>
                                 </tr>
                             </thead>
                             <tbody id="corpoTabela"> 
@@ -76,7 +82,7 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </div>              
             </div>
         </div>
     </div>
@@ -96,36 +102,36 @@
                     <strong>Opss!</strong> Existem alguns campos vazios!
                 </div>
                 <div class="col-12">
-                    <label><b>Nome da Lata</b></label>
-                    <input id="nomedaLata" type="text" placeholder="Nome da lata" 
-                    class="form-control">
+                    <label class="nome_model"><b>NOME DA LATA</b></label>
+                    <input id="nomedaLata" type="text" placeholder="Nome da lata"  
+                    class="form-control entradaDados">
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <label><b>Lote</b></label>
-                        <input id="lote" type="text" placeholder="Lote" class="form-control">
+                        <label class="nome_model"><b>LOTE</b></label>
+                        <input id="lote" type="text" placeholder="Lote" class="form-control entradaDados">
                     </div>
                     <div class="col-6">
-                        <label><b>País de origem</b></label>
-                        <input id="pais" type="text" placeholder="País" class="form-control">
+                        <label class="nome_model"><b>PAÍS DE ORIGEM</b></label>
+                        <input id="pais" type="text" placeholder="País" class="form-control entradaDados">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <label><b>Tipo de Lata</b></label>
-                        <input id="tipo" type="text" placeholder="Ex: Cerveja, suco" class="form-control">
+                        <label class="nome_model"><b>TIPO DE LATA</b></label>
+                        <input id="tipo" type="text" placeholder="Ex: Cerveja, suco" class="form-control entradaDados">
                     </div>
                     <div class="col-6">
-                        <label ><b>Volume(ml)</b></label>
-                        <input id="volume" type="number" placeholder="Volume em mililitros" class="form-control">
+                        <label class="nome_model" ><b>VOLUME(ml)</b></label>
+                        <input id="volume" type="number" placeholder="Volume em mililitros" class="form-control entradaDados">
                     </div>
                 </div>
 
-                <button id="btn_modal">Cadastrar</button>
+                <button id="btn_modal" class="btn btn-success">CADASTRAR</button>
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" id="btn_cancelar">Cancelar</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" id="btn_cancelar">CANCELAR</button>
                 
                 <span class="psw">&copy;<i>CansCollection</i></span>
             </div>

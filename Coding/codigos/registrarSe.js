@@ -52,7 +52,7 @@ function adicionarObjNoArray(valor, lista) {
 
 btnCriarConta.addEventListener("click", function () {
 
-    if ((nomeRegister.value != '') && (emailRegister.value != '') && (passwordRegister != '')) {
+    if ((nomeRegister.value != '') && (emailRegister.value != '') && (passwordRegister.value != '')) {
 
         let adicionarConta = geraObjCadastro(nomeRegister.value, emailRegister.value, passwordRegister.value);
 
